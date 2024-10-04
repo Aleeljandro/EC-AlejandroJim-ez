@@ -25,7 +25,7 @@ Este proceso se repite cada vez que el botón es presionado, con un color difere
 
 ### Demostración
 
-![Cambio de color](/Ejercicio_1/ejercicio1.gif)
+![Cambio de color](/T1/SPRINT_1/Ejercicio_1/ejercicio1.gif)
 
 
 Ejercicio 2:
@@ -58,7 +58,7 @@ Mostrar el resultado o un mensaje de error si los valores no son válidos.
 
 ### Demostración
 
-![Cambio de color](/Ejercicio_1/ejercicio2.gif)
+![Cambio de color](/T1/SPRINT_1/Ejercicio_2/ejercicio2.gif)
 
 
 Ejercicio 3:
@@ -86,7 +86,7 @@ He implementado un código para un Listado Dinámico que consiste en una página
 
 ### Demostración
 
-![Cambio de color](/Ejercicio_1/ejercicio3.gif)
+![Cambio de color](/T1/SPRINT_1/Ejercicio_3/ejercicio3.gif)
 
 Ejercicio 4:
 
@@ -113,7 +113,7 @@ Le pregunté a chatgpt: "Quiero usar eventos como mouseover y mouseout para logr
 
 ### Demostración
 
-![Cambio de color](/Ejercicio_1/ejercicio4.gif)
+![Cambio de color](/T1/SPRINT_1/Ejercicio_4/ejercicio4.gif)
 
 Ejercicio 5:
 
@@ -128,6 +128,6 @@ No he podido realizarlo ya que el html no hay que cambiarlo y chatgpt me insiste
 
 ### Demostración
 
-![Cambio de color](/Ejercicio_1/ejercicio5.gif)
+![Cambio de color](/T1/SPRINT_1/Ejercicio_5/ejercicio5.gif)
 
 
