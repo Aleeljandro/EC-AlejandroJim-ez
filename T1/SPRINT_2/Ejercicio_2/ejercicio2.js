@@ -1,16 +1,38 @@
+document.getElementById('calcular').addEventListener('click', function () {
+    const numero1 = parseFloat(document.getElementById('numero1').value);
+    const numero2 = parseFloat(document.getElementById('numero2').value);
+    const operacion = document.getElementById('operacion').value;
+    let resultado;
 
-// Función para calcular el área del rectángulo
-function calcularAreaRectangulo() {
-    const ancho = document.getElementById('ancho').value;
-    const alto = document.getElementById('alto').value;
-
-    if (ancho > 0 && alto > 0) {
-        const area = ancho * alto;
-        document.getElementById('resultado').textContent = `El área del rectángulo es: ${area}`;
-    } else {
-        document.getElementById('resultado').textContent = "Por favor, introduce valores válidos.";
+    // Validación básica de los campos de entrada
+    if (isNaN(numero1) || isNaN(numero2)) {
+        alert('Ingresa ambos números.');
+        return;
     }
-}
 
-// Evento de clic en el botón para calcular el área
-document.getElementById('calcularButton').addEventListener('click', calcularAreaRectangulo);
+    // Realizar la operación seleccionada
+    switch (operacion) {
+        case 'suma':
+            resultado = numero1 + numero2;
+            break;
+        case 'resta':
+            resultado = numero1 - numero2;
+            break;
+        case 'multiplicacion':
+            resultado = numero1 * numero2;
+            break;
+        case 'division':
+            if (numero2 === 0) {
+                alert('No se puede dividir por cero.');
+                return;
+            }
+            resultado = numero1 / numero2;
+            break;
+        default:
+            alert('Esto no vale, aplícate.');
+            return;
+    }
+
+    // Mostrar el resultado
+    document.getElementById('resultado').textContent = `Resultado: ${resultado}`;
+});

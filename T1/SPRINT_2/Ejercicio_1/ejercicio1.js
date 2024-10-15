@@ -1,14 +1,25 @@
+document.getElementById('iniciar').addEventListener('click', function () {
+    const inputTiempo = document.getElementById('tiempo');
+    let tiempoRestante = parseInt(inputTiempo.value);
 
-// Función para generar un color aleatorio
-function generarColorAleatorio() {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-    return `rgb(${r}, ${g}, ${b})`;
-}
+ 
+    if (isNaN(tiempoRestante) || tiempoRestante <= 0) {
+        alert('Dame un número válido de segundos.');
+        return;
+    }
 
-// Evento de clic en el botón para cambiar el color de fondo
-document.getElementById('colorButton').addEventListener('click', function() {
-    const nuevoColor = generarColorAleatorio();
-    document.body.style.backgroundColor = nuevoColor;
+    const mostrarTiempo = document.getElementById('restante');
+    mostrarTiempo.textContent = `Tiempo restante: ${tiempoRestante} segundos`;
+
+    
+    const intervalo = setInterval(() => {
+        tiempoRestante--;
+
+        if (tiempoRestante >= 0) {
+            mostrarTiempo.textContent = `Tiempo restante: ${tiempoRestante} segundos`;
+        } else {
+            clearInterval(intervalo);
+            mostrarTiempo.textContent = "¡Se acabó el tiempo!";
+        }
+    }, 1000);
 });

@@ -3,31 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hover y Estilo Dinámico</title>
-
-    <script defer src="ejercicio4.js"></script>
-    <style>
-        .div-item {
-            width: 200px;
-            height: 100px;
-            margin: 10px;
-            padding: 20px;
-            background-color: lightgray;
-            text-align: center;
-            line-height: 100px;
-            font-size: 18px;
-            border: 1px solid #000;
-            transition: background-color 0.3s, color 0.3s;
-        }
-    </style>
+    <title>Cronómetro</title>
 </head>
 <body>
-    <h1>Hover sobre los Divs</h1>
+    <h1>Cronómetro</h1>
+    
+    <div id="tiempo">00:00</div>
+    
+    <button id="iniciar">Iniciar</button>
+    <button id="pausar">Pausar</button>
+    <button id="reiniciar">Reiniciar</button>
 
-    <div class="div-item">1</div>
-    <div class="div-item">2</div>
-    <div class="div-item">3</div>
-    <div class="div-item">4</div>
+    <script src="ejercicio4.js"></script>
 </body>
 </html>
-

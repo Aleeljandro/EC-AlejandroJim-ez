@@ -1,17 +1,45 @@
-// Función para aplicar el estilo al hacer hover
-function aplicarHover(event) {
-    event.target.style.backgroundColor = 'blue';
-    event.target.style.color = 'white';
+let segundos = 0;
+let minutos = 0;
+let intervalo;
+
+// Función para actualizar el tiempo en pantalla
+function actualizarPantalla() {
+    const tiempo = document.getElementById('tiempo');
+    const formatoMinutos = minutos < 10 ? `0${minutos}` : minutos;
+    const formatoSegundos = segundos < 10 ? `0${segundos}` : segundos;
+    tiempo.textContent = `${formatoMinutos}:${formatoSegundos}`;
 }
 
-// Función para restaurar el estilo original al quitar hover
-function quitarHover(event) {
-    event.target.style.backgroundColor = 'lightgray';
-    event.target.style.color = 'black';
+// Función que ejecuta el cronómetro cada segundo
+function iniciarCronometro() {
+    intervalo = setInterval(() => {
+        segundos++;
+        if (segundos === 60) {
+            segundos = 0;
+            minutos++;
+        }
+        actualizarPantalla();
+    }, 1000);
 }
 
-// Seleccionar todos los divs y agregar eventos
-document.querySelectorAll('.div-item').forEach(function(div) {
-    div.addEventListener('mouseover', aplicarHover);
-    div.addEventListener('mouseout', quitarHover);
+// Detectar click en "Iniciar"
+document.getElementById('iniciar').addEventListener('click', function () {
+    if (!intervalo) {
+        iniciarCronometro();
+    }
+});
+
+// Detectar click en "Pausar"
+document.getElementById('pausar').addEventListener('click', function () {
+    clearInterval(intervalo);
+    intervalo = null; // Evitar múltiples inicios
+});
+
+// Detectar click en "Reiniciar"
+document.getElementById('reiniciar').addEventListener('click', function () {
+    clearInterval(intervalo);
+    intervalo = null;
+    segundos = 0;
+    minutos = 0;
+    actualizarPantalla();
 });

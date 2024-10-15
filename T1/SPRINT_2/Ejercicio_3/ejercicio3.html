@@ -1,19 +1,39 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Añadir a la lista</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="ejercicio3.js"></script>
+    <title>Encuesta: Color Favorito</title>
+    <style>
+        .barra {
+            background-color: #000000;
+            height: 20px;
+            margin-top: 5px;
+            color: white;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Lista de Elementos</h1>
+    <h1>Encuesta: ¿Cuál es tu color favorito?</h1>
     
-    <input type="text" id="itemInput" placeholder="Escribe algo">
-    <button id="addButton">Añadir a la lista</button>
+    <form id="encuesta">
+        <input type="radio" name="color" value="rojo" id="rojo"> Rojo<br>
+        <input type="radio" name="color" value="azul" id="azul"> Azul<br>
+        <input type="radio" name="color" value="verde" id="verde"> Verde<br>
+        <input type="radio" name="color" value="amarillo" id="amarillo"> Amarillo<br>
+    </form>
+    
+    <button id="enviar">Enviar</button>
+    
+    <h2>Resultados:</h2>
+    <div id="resultados">
+        <div>Rojo: <div id="barra-rojo" class="barra" style="width: 0%;">0 votos</div></div>
+        <div>Azul: <div id="barra-azul" class="barra" style="width: 0%;">0 votos</div></div>
+        <div>Verde: <div id="barra-verde" class="barra" style="width: 0%;">0 votos</div></div>
+        <div>Amarillo: <div id="barra-amarillo" class="barra" style="width: 0%;">0 votos</div></div>
+    </div>
 
-    <ul id="lista"></ul>
+    <script src="ejercicio3.js"></script>
 </body>
 </html>
