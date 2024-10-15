@@ -38,8 +38,8 @@ El comportamiento esperado del temporizador (mostrar un mensaje al finalizar).
 
 ### Demostración
 
-![Cambio de color](/Ejercicio_1/ejercicio1.gif)
-![Cambio de color](/Ejercicio_1/ejercicio1_2.gif)
+![Cambio de color](/T1/SPRINT_2/Ejercicio_1/ejercicio1.gif)
+![Cambio de color](/T1/SPRINT_2/Ejercicio_1/ejercicio1_2.gif)
 
 
 
@@ -67,10 +67,10 @@ Quiero que, al hacer clic en 'Calcular', se muestre el resultado de la operació
 
 ### Demostración
 
-![Cambio de color](/Ejercicio_2/ejercicio2.gif)
-![Cambio de color](/Ejercicio_2/ejercicio2_2.gif)
-![Cambio de color](/Ejercicio_2/ejercicio2_3.gif)
-![Cambio de color](/Ejercicio_2/ejercicio2_4.gif)
+![Cambio de color](/T1/SPRINT_2/Ejercicio_2/ejercicio2.gif)
+![Cambio de color](/T1/SPRINT_2/Ejercicio_2/ejercicio2_2.gif)
+![Cambio de color](/T1/SPRINT_2/Ejercicio_2/ejercicio2_3.gif)
+![Cambio de color](/T1/SPRINT_2/Ejercicio_5/ejercicio2_4.gif)
 
 
 Ejercicio 3:
@@ -101,10 +101,10 @@ Actualizar el gráfico: La función updateGraph() se encarga de recorrer las cla
 
 ### Demostración
 
-![Cambio de color](/Ejercicio_3/ejercicio3.gif)
-![Cambio de color](/Ejercicio_3/ejercicio3_2.gif)
-![Cambio de color](/Ejercicio_3/ejercicio3_3.gif)
-![Cambio de color](//Ejercicio_3/ejercicio3_4.gif)
+![Cambio de color](/T1/SPRINT_2/Ejercicio_3/ejercicio3.gif)
+![Cambio de color](/T1/SPRINT_2/Ejercicio_3/ejercicio3_2.gif)
+![Cambio de color](/T1/SPRINT_2/Ejercicio_3/ejercicio3_3.gif)
+![Cambio de color](/T1/SPRINT_2/Ejercicio_3/ejercicio3_4.gif)
 
 Ejercicio 4:
 
@@ -142,11 +142,10 @@ javascript
 
 ### Demostración
 
-![Cambio de color](/Ejercicio_4/ejercicio4.gif)
-![Cambio de color](/Ejercicio_4/ejercicio4_2.gif)
-![Cambio de color](/Ejercicio_4/ejercicio4_3.gif)
-![Cambio de color](/Ejercicio_4/ejercicio4_4.gif)
-
+![Cambio de color](/T1/SPRINT_2/Ejercicio_4/ejercicio4.gif)
+![Cambio de color](/T1/SPRINT_2/Ejercicio_4/ejercicio4_2.gif)
+![Cambio de color](/T1/SPRINT_2/Ejercicio_4/ejercicio4_3.gif)
+![Cambio de color](/T1/SPRINT_2/Ejercicio_4/ejercicio4_4.gif)
 Ejercicio 5:
 
 Objetivo: Crear un juego de memoria donde el usuario debe hacer clic en dos cartas para ver si coinciden. Si las cartas coinciden, permanecen boca arriba, si no, se voltean nuevamente después de un breve intervalo. El objetivo es encontrar todas las parejas de cartas.
@@ -182,9 +181,9 @@ Y ademas que guarde en cache las cartas parejas y que no halla numero de intento
 
 ### Demostración
 
-![Cambio de color](/Ejercicio_5/ejercicio5.gif)
-![Cambio de color](/Ejercicio_5/ejercicio5_2.gif)
-![Cambio de color](/Ejercicio_5/ejercicio5_3.gif)
-![Cambio de color](/Ejercicio_5/ejercicio5_4.gif)
+![Cambio de color](/T1/SPRINT_2/Ejercicio_5/ejercicio5.gif)
+![Cambio de color](/T1/SPRINT_2/Ejercicio_5/ejercicio5_2.gif)
+![Cambio de color](/T1/SPRINT_2/Ejercicio_5/ejercicio5_3.gif)
+![Cambio de color](/T1/SPRINT_2/Ejercicio_5/ejercicio5_4.gif)
 
 
