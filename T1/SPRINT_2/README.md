@@ -39,7 +39,9 @@ El comportamiento esperado del temporizador (mostrar un mensaje al finalizar).
 ### Demostración
 
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_1/ejercicio1.gif)
+Rellenar el campo de tiempo con el valor 2 segundos y pulsar el botón "Iniciar", verificando que el temporizador cuenta correctamente y muestra una alerta al terminar los 2 segundos.
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_1/ejercicio1_2.gif)
+Repetir la prueba con el valor 4 segundos, asegurándose de que el temporizador cuenta hasta los 4 segundos y que al finalizar se muestra la alerta correspondiente.
 
 
 
@@ -68,10 +70,13 @@ Quiero que, al hacer clic en 'Calcular', se muestre el resultado de la operació
 ### Demostración
 
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_2/ejercicio2.gif)
+Probar que la suma de 10 + 12 muestra correctamente el resultado de 22.
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_2/ejercicio2_2.gif)
+Verificar que la resta de 10 - 12 devuelve el valor esperado de -2.
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_2/ejercicio2_3.gif)
+Comprobar que la multiplicación de 5x4 es 20, y que 5x0 devuelve 0.
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_5/ejercicio2_4.gif)
-
+Probar que la división de 5/4 es 1.25 y que 5/0 devuelve el mensaje "INDEFINIDO".
 
 Ejercicio 3:
 
@@ -102,9 +107,13 @@ Actualizar el gráfico: La función updateGraph() se encarga de recorrer las cla
 ### Demostración
 
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_3/ejercicio3.gif)
+Verificar que al seleccionar una opción y hacer clic en "Enviar", se actualicen correctamente los votos en el gráfico.
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_3/ejercicio3_2.gif)
+Comprobar que el gráfico de barras se actualiza dinámicamente después de cada nueva votación.
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_3/ejercicio3_3.gif)
+Probar que el sistema gestiona correctamente intentos de envío sin seleccionar ninguna opción.
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_3/ejercicio3_4.gif)
+Verificar que las votaciones previas se mantienen después de varias interacciones.
 
 Ejercicio 4:
 
@@ -143,9 +152,14 @@ javascript
 ### Demostración
 
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_4/ejercicio4.gif)
+Probar que el cronómetro comienza a contar correctamente al hacer clic en "Iniciar".
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_4/ejercicio4_2.gif)
+Comprobar que al pausar el cronómetro se detiene en el tiempo actual y no continúa avanzando.
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_4/ejercicio4_3.gif)
+Verificar que al hacer clic en "Reiniciar", el cronómetro vuelve a cero.
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_4/ejercicio4_4.gif)
+Probar que el cronómetro maneja correctamente largos períodos de tiempo sin errores.
+
 Ejercicio 5:
 
 Objetivo: Crear un juego de memoria donde el usuario debe hacer clic en dos cartas para ver si coinciden. Si las cartas coinciden, permanecen boca arriba, si no, se voltean nuevamente después de un breve intervalo. El objetivo es encontrar todas las parejas de cartas.
@@ -182,8 +196,12 @@ Y ademas que guarde en cache las cartas parejas y que no halla numero de intento
 ### Demostración
 
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_5/ejercicio5.gif)
+Verificar que las cartas se voltean al hacer clic y se quedan volteadas si coinciden.
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_5/ejercicio5_2.gif)
+Comprobar que dos cartas no coincidentes se voltean de nuevo después de un breve intervalo.
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_5/ejercicio5_3.gif)
+Probar que el juego detecta cuando se han encontrado todas las parejas y muestra un mensaje de finalización.
 ![Cambio de color](/T1/SPRINT_2/Ejercicio_5/ejercicio5_4.gif)
+Verificar que el juego puede reiniciarse correctamente barajando las cartas de nuevo.
 
 
