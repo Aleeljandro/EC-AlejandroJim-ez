@@ -73,7 +73,7 @@ src/
 
 ### Demostración
 
-![Cambio de color](/T1/SPRINT_3/Ejercicio_1/ejercicio1.png)
+![Cambio de color](/T1/SPRINT_3/Ejercicio_1/ejercicio1.gif)
 
 
 
