@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function mostrarInfoBasica() {
     const nombrePokemon = document.getElementById("nombrePokemon").value;
     const resultado = document.getElementById("resultadoBasico");
-
+    
     try {
         const respuesta = await fetch(`https://pokeapi.co/api/v2/pokemon/${nombrePokemon.toLowerCase()}`);
         if (!respuesta.ok) throw new Error("Pokémon no encontrado");
