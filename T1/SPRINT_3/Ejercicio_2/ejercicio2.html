@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Pokémon</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .pokemon-evolucion {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+}
+
+.pokemon-image {
+    width: 100px;
+    height: auto;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Información de Pokémon</h1>
+
+    <!-- Sección de información básica del Pokémon -->
+    <div class="pokemon-info">
+        <h2>Información Básica</h2>
+        <input type="text" id="nombrePokemon" placeholder="Nombre del Pokémon" />
+        <button id="buscarPokemonBtn">Buscar Pokémon</button>
+        <div id="resultadoBasico"></div>
+    </div>
+
+    <!-- Sección de comparación de Pokémon -->
+    <div class="comparison">
+        <h2>Comparar Pokémon</h2>
+        <input type="text" id="pokemon1" placeholder="Primer Pokémon" />
+        <input type="text" id="pokemon2" placeholder="Segundo Pokémon" />
+        <button id="compararPokemonBtn">Comparar</button>
+        <div id="resultadoComparacion"></div>
+    </div>
+
+    <!-- Sección de cadena evolutiva de un Pokémon -->
+    <div class="evolution-chain">
+        <h2>Cadena Evolutiva</h2>
+        <input type="text" id="pokemonEvolucion" placeholder="Nombre del Pokémon" />
+        <button id="verEvolucionBtn">Ver Evolución</button>
+        <div id="resultadoEvolucion"></div>
+    </div>
+
+    <script src="Ejercicio2.js"></script>
+</body>
+</html>
