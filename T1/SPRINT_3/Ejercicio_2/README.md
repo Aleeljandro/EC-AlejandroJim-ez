@@ -52,5 +52,13 @@ Prueba 1. Obtener información de Corsola.
 Prueba 2. Obtener información de Slowking.
 ![Cambio de color](/T1/SPRINT_3/Ejercicio_2/ejercicio2_2.gif)
 Prueba 3. Manejo de error al buscar "fakepokemon".
+![Cambio de color](/T1/SPRINT_3/Ejercicio_2/ejercicio2_3.gif)
+Prueba 1. Comparar "Gengar" y "Jynx"
+![Cambio de color](/T1/SPRINT_3/Ejercicio_2/ejercicio2_4.gif)
+Prueba 2. Comparar "Wailord" y "Golem"
+![Cambio de color](/T1/SPRINT_3/Ejercicio_2/ejercicio2_5.gif)
+Prueba 1. Obtener cadena evolutiva de "Magnemite".
+![Cambio de color](/T1/SPRINT_3/Ejercicio_2/ejercicio2_6.gif)
+Prueba 2. Manejar Pokémon sin cadena evolutiva como "Tauros".
 
 
