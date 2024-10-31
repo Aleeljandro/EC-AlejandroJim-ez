@@ -46,11 +46,11 @@ src/
 
 ### Demostración
 
-![Cambio de color](/T1/SPRINT_2/Ejercicio_2/ejercicio2.gif)
+![Cambio de color](/T1/SPRINT_3/Ejercicio_2/ejercicio2.gif)
 Prueba 1.
-![Cambio de color](/T1/SPRINT_2/Ejercicio_2/ejercicio2_1.gif)
+![Cambio de color](/T1/SPRINT_3/Ejercicio_2/ejercicio2_1.gif)
 Prueba 2.
-![Cambio de color](/T1/SPRINT_2/Ejercicio_2/ejercicio2_2.gif)
+![Cambio de color](/T1/SPRINT_3/Ejercicio_2/ejercicio2_2.gif)
 Prueba 3.
 
 
