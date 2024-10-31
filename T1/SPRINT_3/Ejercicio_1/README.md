@@ -74,7 +74,6 @@ src/
 ### Demostración
 
 ![Cambio de color](/T1/SPRINT_3/Ejercicio_1/ejercicio1.png)
-Rellenar el campo de tiempo con el valor 2 segundos y pulsar el botón "Iniciar", verificando que el temporizador cuenta correctamente y muestra una alerta al terminar los 2 segundos.
 
 
 
