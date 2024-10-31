@@ -47,10 +47,10 @@ src/
 ### Demostración
 
 ![Cambio de color](/T1/SPRINT_3/Ejercicio_2/ejercicio2.gif)
-Prueba 1.
+Prueba 1. Obtener información de Corsola.
 ![Cambio de color](/T1/SPRINT_3/Ejercicio_2/ejercicio2_1.gif)
-Prueba 2.
+Prueba 2. Obtener información de Slowking.
 ![Cambio de color](/T1/SPRINT_3/Ejercicio_2/ejercicio2_2.gif)
-Prueba 3.
+Prueba 3. Manejo de error al buscar "fakepokemon".
 
 
