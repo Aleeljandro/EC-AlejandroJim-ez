@@ -1,0 +1,36 @@
+/* Estilo base para cada fila de miembro */
+.member-item {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Estilo para hover */
+.member-item:hover {
+    background-color: #f9f9f9;
+}
+
+/* Estilo para las celdas de la tabla */
+.member-item td {
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Estilo para la celda del checkbox */
+.member-item td:first-child {
+    text-align: center;
+}
+
+/* Checkbox personalizado */
+.member-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Resaltar el checkbox y la fila al seleccionar */
+.member-item input[type="checkbox"]:checked + td {
+    background-color: #e6f7ff;
+}
