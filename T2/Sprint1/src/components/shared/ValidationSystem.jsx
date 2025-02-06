@@ -1,12 +1,11 @@
 import React from 'react';
+import '../../styles/validation.css';
 
-const ValidationSystem = ({ errors }) => {
+const ValidationSystem = ({ message, type }) => {
   return (
-    <ul className="validation-errors">
-      {errors.map((error, index) => (
-        <li key={index}>{error}</li>
-      ))}
-    </ul>
+    <div className={`validation-message ${type}`}>
+      {message}
+    </div>
   );
 };
 

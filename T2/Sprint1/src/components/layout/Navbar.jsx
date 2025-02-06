@@ -1,20 +1,56 @@
-import React from 'react';
-import '../../styles/styles.css';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../../styles/layout.css';
+import CartPreview from '../Home/CartPreview';
 
-const Navbar = () => {
+const Header = ({ cartItems }) => {
+  const [showCartPreview, setShowCartPreview] = useState(false);
+
   return (
-    <nav className="navbar">
-      <div className="navbar-logo">BabyClothes</div>
-      <ul className="navbar-menu">
-        <li><a href="#home">Inicio</a></li>
-        <li><a href="#categories">Categorías</a></li>
-        <li><a href="#offers">Ofertas</a></li>
-      </ul>
-      <div className="navbar-cart">
-        <a href="#cart">🛒 Carrito (0)</a>
+    <header className="header">
+      <div className="logo">
+        <Link to="/">
+          <img 
+            src="/assets/icons/Logo.svg" 
+            alt="Logo de la aplicación" 
+            className="logo-image"
+          />
+        </Link>
       </div>
-    </nav>
+      <nav className="nav">
+        <ul className="nav-list">
+          <li><Link to="/" className="nav-item">Inicio</Link></li>
+          <li><Link to="/404" className="nav-item">Habitación Bebe-Infantil</Link></li>
+          <li><Link to="/404" className="nav-item">Habitación</Link></li>
+          <li><Link to="/404" className="nav-item">Proyectos</Link></li>
+          <li><Link to="/404" className="nav-item">Ofertas</Link></li>
+          <li><Link to="/404" className="nav-item">Contacto</Link></li>
+        </ul>
+      </nav>
+      <div 
+        className="cart-container"
+        onMouseEnter={() => setShowCartPreview(true)}
+        onMouseLeave={() => setShowCartPreview(false)}
+      >
+        <img 
+          src="/assets/icons/Carrito.svg" 
+          alt="Carrito de compras" 
+          className="cart-icon"
+        />
+        {showCartPreview && <CartPreview cartItems={cartItems} setShowCartPreview={setShowCartPreview} />}
+      </div>
+      <button 
+        className="login-button" 
+        onClick={() => window.location.href = '/login'}
+      >
+        <img 
+          src="/assets/icons/IniciarSesion.svg" 
+          alt="Login" 
+          className="login-icon"
+        />
+      </button>
+    </header>
   );
 };
 
-export default Navbar;
+export default Header;

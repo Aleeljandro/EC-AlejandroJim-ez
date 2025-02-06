@@ -1,40 +1,52 @@
-import React, { useState } from "react";
-import "./authStyles.css"; // Asegúrate de tener los estilos importados correctamente
+import React, { useState } from 'react';
+import { forgotPassword } from '../../services/auth_API';
+import '../../styles/login.css';
+import NotificationSystem from '../Shared/NotificationSystem';
 
-const ForgotPasswordForm = ({ onClose }) => {
-  const [email, setEmail] = useState("");
+const ForgotPasswordForm = () => {
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
 
-  const handleRecoverPassword = (e) => {
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  const handleForgotPassword = (e) => {
     e.preventDefault();
-    if (email) {
-      alert(`Se ha enviado un correo a ${email} con instrucciones para recuperar tu contraseña.`);
-      setEmail("");
-      onClose();
-    } else {
-      alert("Por favor, introduce un correo electrónico válido.");
+    if (!validateEmail(email)) {
+      setError('Invalid email format');
+      return;
     }
+    setError('');
+    forgotPassword(email)
+      .then(message => {
+        console.log('Correo electrónico detectado correctamente:', email);
+
+        setSuccess(message);
+        setTimeout(() => {
+          window.location.href = '/login';
+        }, 2000);
+      })
+      .catch(err => setError(err));
   };
 
   return (
-    <div className="modal">
-      <div className="modal-content">
-        <span className="close" onClick={onClose}>
-          &times;
-        </span>
-        <h2>Recuperar Contraseña</h2>
-        <p>Introduce tu correo electrónico para recibir una nueva contraseña:</p>
-        <form onSubmit={handleRecoverPassword}>
-          <input
-            type="email"
-            placeholder="Correo Electrónico"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <button type="submit">Enviar</button>
-        </form>
+    <form onSubmit={handleForgotPassword} className="auth-form">
+      <h2>Forgot Password</h2>
+      <div>
+        <label>Email:</label>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
       </div>
-    </div>
+      {error && <NotificationSystem message={error} type="error" />}
+      {success && <NotificationSystem message={success} type="success" />}
+      <button type="submit">Send Recovery Link</button>
+    </form>
   );
 };
 

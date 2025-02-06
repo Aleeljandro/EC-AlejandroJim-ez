@@ -1,8 +1,12 @@
 import React from 'react';
+import '../../styles/notification.css';
 
 const NotificationSystem = ({ message, type }) => {
-  const notificationClass = `notification ${type}`;
-  return <div className={notificationClass}>{message}</div>;
+  return (
+    <div className={`notification-message ${type}`}>
+      {message}
+    </div>
+  );
 };
 
 export default NotificationSystem;
