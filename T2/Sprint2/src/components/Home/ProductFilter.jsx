@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 import ReactSlider from "react-slider";
-import '../../styles/products.css';
+import "../../styles/products.css";
 
 const ProductFilter = ({ products, onFilter }) => {
     const [name, setName] = useState("");
+    const [category, setCategory] = useState("");
+    const [rating, setRating] = useState("");
     const [priceRange, setPriceRange] = useState([0, 100]);
     const [minPrice, setMinPrice] = useState(0);
     const [maxPrice, setMaxPrice] = useState(100);
 
     useEffect(() => {
         if (products.length > 0) {
-            const prices = products.map(product => parseFloat(product.price.replace('€', '')));
+            const prices = products.map(product => parseFloat(product.price.replace("€", "")));
             const min = Math.min(...prices);
             const max = Math.max(...prices);
             setMinPrice(min);
@@ -25,32 +27,24 @@ const ProductFilter = ({ products, onFilter }) => {
 
     const handleFilter = () => {
         const filteredProducts = products.filter(product => {
-            const productPrice = parseFloat(product.price.replace('€', ''));
-            return productPrice >= priceRange[0] && productPrice <= priceRange[1];
+            const productPrice = parseFloat(product.price.replace("€", ""));
+            const matchesName = name.trim() === "" || (product.name && product.name.toLowerCase().includes(name.toLowerCase().trim()));
+            const matchesCategory = category === "" || product.category === category;
+            const matchesRating = rating === "" || product.rating >= parseFloat(rating);
+            const matchesPrice = productPrice >= priceRange[0] && productPrice <= priceRange[1];
+
+            return matchesName && matchesCategory && matchesRating && matchesPrice;
         });
+
         onFilter(filteredProducts);
     };
 
     const handleClear = () => {
         setName("");
+        setCategory("");
+        setRating("");
         setPriceRange([minPrice, maxPrice]);
         onFilter(products);
-    };
-
-    const handleMinPriceChange = (e) => {
-        const value = parseFloat(e.target.value);
-        if (!isNaN(value) && value <= priceRange[1]) {
-            setPriceRange([value, priceRange[1]]);
-            setMinPrice(value);
-        }
-    };
-
-    const handleMaxPriceChange = (e) => {
-        const value = parseFloat(e.target.value);
-        if (!isNaN(value) && value >= priceRange[0]) {
-            setPriceRange([priceRange[0], value]);
-            setMaxPrice(value);
-        }
     };
 
     return (
@@ -61,6 +55,21 @@ const ProductFilter = ({ products, onFilter }) => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
             />
+
+            <select value={category} onChange={(e) => setCategory(e.target.value)}>
+                <option value="">Todas las categorías</option>
+                <option value="sillas">Gorros</option>
+                <option value="bolsos">Bolsos</option>
+                <option value="talegas">Sábanas</option>
+            </select>
+
+            <select value={rating} onChange={(e) => setRating(e.target.value)}>
+                <option value="">Todas las valoraciones</option>
+                <option value="4">4 estrellas o más</option>
+                <option value="3">3 estrellas o más</option>
+                <option value="2">2 estrellas o más</option>
+            </select>
+
             <div className="slider-container">
                 <label>Rango de precios:</label>
                 <ReactSlider
@@ -73,23 +82,8 @@ const ProductFilter = ({ products, onFilter }) => {
                     onChange={(value) => setPriceRange(value)}
                     renderThumb={(props, state) => <div {...props}>{state.valueNow}€</div>}
                 />
-                <div className="price-range">
-                    <input
-                        type="number"
-                        value={priceRange[0]}
-                        onChange={handleMinPriceChange}
-                        min={minPrice}
-                        max={priceRange[1]}
-                    />
-                    <input
-                        type="number"
-                        value={priceRange[1]}
-                        onChange={handleMaxPriceChange}
-                        min={priceRange[0]}
-                        max={maxPrice}
-                    />
-                </div>
             </div>
+
             <button onClick={handleFilter}>Filtrar</button>
             <button onClick={handleClear}>Limpiar</button>
         </div>
