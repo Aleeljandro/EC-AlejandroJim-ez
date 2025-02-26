@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { FavoritesProvider } from "./services/favoritesContext"; // 🔹 Importación correcta
+import { FavoritesProvider } from "./services/favoritesContext";
+import { ThemeProvider } from "./services/themeContext";
 
 import "./App.css";
 import Footer from "./components/Layout/Footer";
@@ -12,7 +13,7 @@ import CartPage from "./components/Home/CartPage";
 import LoginForm from "./components/Auth/LoginForm";
 import RegisterForm from "./components/Auth/RegisterForm";
 import ForgotPasswordForm from "./components/Auth/ForgotPasswordForm";
-import FavoritesPage from "./components/Home/FavoritesPage"; // 🔹 Importar la página de favoritos
+import FavoritesPage from "./components/Home/FavoritesPage";
 import { fetchProducts } from "./services/product_API";
 
 const NotFound = () => <h2>404 Not Found</h2>;
@@ -45,42 +46,43 @@ function App() {
   };
 
   return (
-    <FavoritesProvider> {/* 🔹 Ahora está bien definido */}
-      <Router>
-        <div>
-          <header>
-            <Header cartItems={cartItems} />
-          </header>
+    <ThemeProvider>
+      <FavoritesProvider>
+        <Router>
+          <div>
+            <header>
+              <Header cartItems={cartItems} />
+            </header>
 
-          <main>
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <>
-                    <Herosection />
-                    <ProductFilter products={products} onFilter={handleFilter} />
-                    <ContentList products={filteredProducts} onAddToCart={handleAddToCart} />
-                  </>
-                }
-              />
-              {/* 🔹 Corrección: Pasar setCartItems a CartPage */}
-              <Route path="/cart" element={<CartPage cartItems={cartItems} setCartItems={setCartItems} />} />
-              <Route path="/login" element={<LoginForm />} />
-              <Route path="/register" element={<RegisterForm />} />
-              <Route path="/forgot-password" element={<ForgotPasswordForm />} />
-              <Route path="/favorites" element={<FavoritesPage />} /> {/* 🔹 Nueva ruta */}
-              <Route path="/404" element={<NotFound />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </main>
+            <main>
+              <Routes>
+                <Route
+                  path="/"
+                  element={
+                    <>
+                      <Herosection />
+                      <ProductFilter products={products} onFilter={handleFilter} />
+                      <ContentList products={filteredProducts} onAddToCart={handleAddToCart} />
+                    </>
+                  }
+                />
+                <Route path="/cart" element={<CartPage cartItems={cartItems} setCartItems={setCartItems} />} />
+                <Route path="/login" element={<LoginForm />} />
+                <Route path="/register" element={<RegisterForm />} />
+                <Route path="/forgot-password" element={<ForgotPasswordForm />} />
+                <Route path="/favorites" element={<FavoritesPage />} />
+                <Route path="/404" element={<NotFound />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
 
-          <footer>
-            <Footer />
-          </footer>
-        </div>
-      </Router>
-    </FavoritesProvider>
+            <footer>
+              <Footer />
+            </footer>
+          </div>
+        </Router>
+      </FavoritesProvider>
+    </ThemeProvider>
   );
 }
 

@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -35,4 +36,56 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.theme-toggle {
+  margin-top: 100px; /* Ajusta según lo necesites */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+body.dark-mode {
+  background-color: #503448 !important;
+  color: white !important;
+}
+
+body.dark-mode .header {
+  background-color:#503448 !important;
+}
+
+body.dark-mode .nav-item {
+  color: white !important;
+}
+
+.footer {
+  height: 50px; /* Ajusta la altura */
+  padding: 10px 0;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  background-color: #222;
+  color: white;
+  text-align: center; /* Asegura que el texto también esté centrado */
+  width: 100%; /* Ocupa todo el ancho */
+}
+
+.nav-list-footer {
+  display: flex;
+  gap: 15px; /* Espaciado entre elementos */
+  list-style: none;
+  padding: 0;
+  margin: 5px 0; /* Ajuste de margen */
+}
+
+.nav-item-footer {
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+}
+
+#Derechos {
+  font-size: 10px;
+  margin-top: 5px;
 }

@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../../styles/layout.css';
-import CartPreview from '../Home/CartPreview';
+import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import "../../styles/layout.css";
+import CartPreview from "../Home/CartPreview";
+import { ThemeContext } from "../../services/themeContext"; // Importar el contexto del tema
 
 const Header = ({ cartItems }) => {
   const [showCartPreview, setShowCartPreview] = useState(false);
+  const { darkMode, setDarkMode } = useContext(ThemeContext); // Obtener el estado del tema
 
   return (
     <header className="header">
@@ -25,7 +27,7 @@ const Header = ({ cartItems }) => {
           <li><Link to="/404" className="nav-item">Proyectos</Link></li>
           <li><Link to="/404" className="nav-item">Ofertas</Link></li>
           <li><Link to="/404" className="nav-item">Contacto</Link></li>
-          <li><Link to="/favorites">❤️ Favoritos</Link></li> {/* Nuevo enlace */}
+          <li><Link to="/favorites">❤️ Favoritos</Link></li>
         </ul>
       </nav>
       <div 
@@ -42,13 +44,17 @@ const Header = ({ cartItems }) => {
       </div>
       <button 
         className="login-button" 
-        onClick={() => window.location.href = '/login'}
+        onClick={() => window.location.href = "/login"}
       >
         <img 
           src="/assets/icons/IniciarSesion.svg" 
           alt="Login" 
           className="login-icon"
         />
+      </button>
+      {/* Botón para cambiar el tema */}
+      <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
+        {darkMode ? "☀ Modo Claro" : "🌙 Modo Oscuro"}
       </button>
     </header>
   );
