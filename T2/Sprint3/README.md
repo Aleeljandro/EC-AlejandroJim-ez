@@ -1,191 +1,103 @@
-> He añadido una pagina para el carrito (CartPage.jsx) y su respectivo css (CartPage.css)
+🔸 Historia de Usuario
+✏️ Título: Filtrado de Productos por Color
+📝 Descripción: "Como usuario, quiero filtrar los productos por color para encontrar más fácilmente los artículos que coincidan con mis preferencias estéticas."
+
+🔸 Criterios de Aceptación
+
+Dado que los usuarios pueden tener preferencias de color específicas al buscar productos, la aplicación deberá proporcionar un filtro de colores.
+Cuando el usuario seleccione un color en el filtro, el sistema deberá mostrar únicamente los productos que coincidan con esa selección.
+Entonces la lista de productos deberá actualizarse en menos de 500ms para reflejar los resultados filtrados.
+🔸 Diseño
+🎨 Se añadirá un menú desplegable o una paleta de colores en la sección de productos.
+⚙️ Se definirá una clase CSS para resaltar la opción de color seleccionada.
+
+🔸 Implementación
+📌 Creación de un nuevo estado en React para manejar el color seleccionado.
+🗂️ Aplicación de un filtro dinámico a la lista de productos basada en el color elegido.
+
+🔸 Pruebas
+🔍 Caso de prueba 1: Seleccionar un color y verificar que solo se muestran productos de ese color.
+🔍 Caso de prueba 2: Seleccionar "Todos" y comprobar que se muestran todos los productos nuevamente.
+🔍 Caso de prueba 3: Probar en distintos navegadores y dispositivos para asegurar compatibilidad.
 
 
-# Proyecto de Resolución de Problemas
+### Demostración
 
-## Análisis del Problema
-
-En el directorio específico de la asignatura, se debe resolver el problema de crear una aplicación web de comercio electrónico que permita a los usuarios registrarse, iniciar sesión, navegar por productos, filtrar productos por nombre y rango de precios, agregar productos al carrito y realizar compras. El problema debe ser abordado de manera clara y sin ambigüedades, asegurando que todos los requisitos estén bien definidos y comprendidos.
-
-## Diseño de la Propuesta de Solución del Problema
-
-Para resolver el problema, se ha diseñado una solución utilizando herramientas de esquemas gráficos como UML y diagramas de flujo. A continuación se presentan los diagramas utilizados:
-
-1. **Diagrama de Casos de Uso**: Describe las interacciones entre los usuarios y el sistema.
-2. **Diagrama de Clases**: Muestra la estructura de las clases y sus relaciones.
-3. **Diagrama de Secuencia**: Ilustra el flujo de interacción entre los componentes del sistema.
-4. **Diagrama de Flujo**: Representa el flujo de datos y las operaciones principales del sistema.
-
-## Implementación del Diseño Propuesto
-
-En este punto, se procede a implementar el diseño establecido en el punto anterior. La implementación se realiza utilizando React para el frontend y localStorage para el almacenamiento de datos. La estructura de carpetas del proyecto es la siguiente:
+![Cambio de color](/T2/SPRINT_3/GIF/1.gif)
+Prueba 1: 1: Seleccionar un color y verificar que solo se muestran productos de ese color.
 
 
-## Estructura de carpetas
-├── .gitignore
- 
- ├── package.json 
- 
- ├── public
- 
- │ ├── assets 
- 
- │ │ ├── icons 
- 
- │ │ ├── images 
- 
- │ │ └── products 
- 
- │ ├── index.html 
- 
- │ ├── manifest.json 
- 
- │ └── robots.txt 
- 
- ├── README.md 
- 
- ├── src 
- 
- │ ├── App.css 
- 
- │ ├── App.js 
- 
- │ ├── App.test.js 
- 
- │ ├── components 
-
- │ │ ├── Auth 
-
- │ │ │ ├── ForgotPasswordForm.jsx
- 
- │ │ │ ├── LoginForm.jsx 
- 
- │ │ │ └── RegisterForm.jsx 
- 
- │ │ ├── Home 
- 
- │ │ │ ├── CartPage.jsx 
- 
- │ │ │ ├── CartPreview.jsx 
-
- │ │ │ ├── HeroSection.jsx 
- 
- │ │ │ ├── ProductCard.jsx 
- 
- │ │ │ ├── ProductFilter.jsx 
- 
- │ │ │ └── ProductList.jsx 
- 
- │ │ ├── Layout 
- 
- │ │ │ ├── Footer.jsx 
- 
- │ │ │ └── NavBar.jsx 
- 
- │ │ └── Shared 
- 
- │ │ ├── NotificationSystem.jsx 
- 
- │ │ └── ValidationSystem.jsx 
- 
- │ ├── index.css 
- 
- │ ├── index.js 
- 
- │ ├── reportWebVitals.js 
- 
- │ ├── services 
-
- │ │ ├── auth_API.js 
-
- │ │ └── product_API.js 
- 
- │ ├── setupTests.js 
- 
- │ └── styles
- 
-  │ ├── CartPage.css 
- 
-  │ ├── home.css 
- 
-  │ ├── layout.css 
-
-  │ ├── login.css
-   
-  │ ├── notification.css 
-  
-  │ ├── products.css
-
-  │ └── validation.css
+![Cambio de color](/T1/SPRINT_3/GIF/2.gif)
+Prueba 2: Seleccionar "Todos" y comprobar que se muestran todos los productos nuevamente.
 
 
-## Pruebas de la Resolución del Problema
+![Cambio de color](/T1/SPRINT_3/GIF/3.gif)
+Prueba 3: Probar en distintos navegadores y dispositivos para asegurar compatibilidad.
 
-Es indispensable realizar pruebas para verificar la integridad y correcto funcionamiento de la implementación realizada. Para ello, se comparará el comportamiento esperado del análisis del problema con la implementación. Se utilizarán pruebas unitarias y de integración para asegurar que todas las funcionalidades operen correctamente y que los usuarios puedan interactuar con el sistema sin problemas.
+✏️ Título: Gestión de Productos Favoritos
+📝 Descripción: "Como usuario, quiero poder marcar productos como favoritos para acceder rápidamente a ellos en una sección dedicada."
 
-### Pruebas Realizadas
+🔸 Criterios de Aceptación
 
-## Prueba 1  Comprobación de elementos mínimos y específicos
+Dado que los usuarios pueden querer guardar productos para revisarlos más tarde, la aplicación deberá permitir marcar y desmarcar productos como favoritos.
+Cuando el usuario haga clic en el icono de "favorito" en un producto, este deberá guardarse en una lista accesible desde la navegación.
+Entonces, la lista de favoritos deberá actualizarse en tiempo real y persistir tras recargar la página.
+🔸 Diseño
+🎨 Se añadirá un icono de corazón en cada tarjeta de producto para marcarlo como favorito.
+⚙️ Se incluirá una sección de "Favoritos" en la navegación para acceder rápidamente a los productos guardados.
 
-### Navegar a la pantalla de Home.
+🔸 Implementación
+📌 Creación de un contexto en React para gestionar el estado de los productos favoritos.
+🗂️ Uso de localStorage para guardar los favoritos y mantenerlos tras una recarga.
 
-### Comprobar que aparecen los elementos mínimos y específicos definidos anteriormente con el detalle descrito en los diferentes enumerados
+🔸 Pruebas
+🔍 Caso de prueba 1: Marcar un producto como favorito y verificar que aparece en la sección correspondiente.
+🔍 Caso de prueba 2: Recargar la página y comprobar que los favoritos siguen guardados.
+🔍 Caso de prueba 3: Desmarcar un producto de favoritos y verificar que desaparece de la lista.
 
-![Gif 1: Confirmar notificación de éxito](public/assets/images/ricardo1.gif)
-
-## Prueba 2 : Inicio de Sesión Correcto
-
-### Ingresar un correo y contraseña válidos.
-
-### Hacer clic en Iniciar Sesión.
-
-### Verificar que el usuario es redirigido al panel principal.
-
-### Confirmar notificación de éxito.
-
-![Gif 2: Inicio de Sesión Correcto](public/assets/images/ricardo2.gif)
-
-## Prueba 3 Error en Inicio de Sesión
-### Ingresar credenciales incorrectas.
-
-### Verificar que aparece una notificación de error
+![Cambio de color](/T1/SPRINT_3/GIF/4.gif)
+Prueba 1: Marcar un producto como favorito y verificar que aparece en la sección correspondiente.
 
 
-![Gif 3:  Verificar que aparece una notificación de error](public/assets/images/ricardo3.gif)
-
-## Prueba 4 : Registro con Validaciones
-
-### Ingresar datos inválidos (correo incorrecto, contraseñas que no coinciden).
-
-### Verificar que se muestran mensajes de error en tiempo real.
-
-### Corregir los datos y completar el registro.
-
-### Verificar notificación de éxito y redirección al login.
-
-![Gif 4:   Registro con Validaciones](public/assets/images/ricardo4.gif)
-
-## Prueba 5 Recuperación de Contraseña
-
-### Ingresar un correo registrado.
-
-### Verificar que se envía un correo de recuperación.
-
-### Probar con un correo no registrado y verificar el mensaje de error.
-
-![Gif 5:  Recuperación de Contraseña](public/assets/images/ricardo5.gif)
-
-El resultado de las pruebas ha sido satisfactorio, confirmando que la implementación cumple con los requisitos definidos en el análisis del problema.
-
-## Diagrama de flujo de API
-![Gif 5:  Recuperación de Contraseña](public/assets/images/DIagrama.jpg)
-
-## Diagrama de flujo de login
-![Gif 5:  Recuperación de Contraseña](public/assets/images/DiagramaDeLogin.jpeg)
+![Cambio de color](/T1/SPRINT_3/GIF/5.gif)
+Prueba 2: Recargar la página y comprobar que los favoritos siguen guardados.
 
 
+![Cambio de color](/T1/SPRINT_3/GIF/6.gif)
+Prueba 3: Desmarcar un producto de favoritos y verificar que desaparece de la lista.
 
 
+✏️ Título: Eliminar Productos del Carrito
+📝 Descripción: "Como usuario, quiero poder eliminar productos del carrito de compras para gestionar mi pedido de manera eficiente."
+
+🔸 Criterios de Aceptación
+
+Dado que los usuarios pueden cambiar de opinión sobre los productos en su carrito, la aplicación deberá permitir eliminar productos fácilmente.
+Cuando el usuario haga clic en el botón de eliminar junto a un producto en el carrito, este deberá desaparecer de la lista de compras.
+Entonces, el total del carrito deberá actualizarse automáticamente y la eliminación deberá persistir tras recargar la página.
+🔸 Diseño
+🎨 Se añadirá un botón de "🗑 Eliminar" junto a cada producto dentro del carrito.
+⚙️ Se mostrará una animación o efecto visual al eliminar un producto para mejorar la experiencia del usuario.
+
+🔸 Implementación
+📌 Modificación del contexto de carrito en React para gestionar la eliminación de productos.
+🗂️ Uso de localStorage para mantener la lista del carrito actualizada incluso tras una recarga de la página.
+
+🔸 Pruebas
+🔍 Caso de prueba 1: Agregar un producto al carrito y luego eliminarlo, verificando que desaparece de la lista.
+🔍 Caso de prueba 2: Eliminar un producto y confirmar que el total del carrito se actualiza correctamente.
+🔍 Caso de prueba 3: Recargar la página y comprobar que el producto eliminado no reaparece en el carrito.
+
+![Cambio de color](/T1/SPRINT_3/GIF/7.gif.gif)
+Prueba 1: Agregar un producto al carrito y luego eliminarlo, verificando que desaparece de la lista.
+
+
+![Cambio de color](/T1/SPRINT_3/GIF/8.gif)
+Prueba 2: Eliminar un producto y confirmar que el total del carrito se actualiza correctamente.
+
+
+![Cambio de color](/T1/SPRINT_3/GIF/9.gif)
+Prueba 3: Recargar la página y comprobar que el producto eliminado no reaparece en el carrito.
 
 
 

@@ -211,3 +211,11 @@
 .product-filter button:hover {
     background-color: #501c38;
 }
+
+select {
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  

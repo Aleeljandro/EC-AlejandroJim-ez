@@ -19,7 +19,11 @@ import { fetchProducts } from "./services/product_API";
 const NotFound = () => <h2>404 Not Found</h2>;
 
 function App() {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -29,6 +33,10 @@ function App() {
       setFilteredProducts(products);
     });
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const handleAddToCart = (product) => {
     setCartItems([...cartItems, product]);
