@@ -23,15 +23,15 @@ Entonces la lista de productos deberá actualizarse en menos de 500ms para refle
 
 ### Demostración
 
-![Cambio de color](/T2/SPRINT_3/GIF/1.gif)
+![Cambio de color](/T2/Sprint3/GIF/1.gif)
 Prueba 1: 1: Seleccionar un color y verificar que solo se muestran productos de ese color.
 
 
-![Cambio de color](/T2/SPRINT_3/GIF/2.gif)
+![Cambio de color](/T2/Sprint3/GIF/2.gif)
 Prueba 2: Seleccionar "Todos" y comprobar que se muestran todos los productos nuevamente.
 
 
-![Cambio de color](/T2/SPRINT_3/GIF/3.gif)
+![Cambio de color](/T2/Sprint3/GIF/3.gif)
 Prueba 3: Probar en distintos navegadores y dispositivos para asegurar compatibilidad.
 
 ✏️ Título: Gestión de Productos Favoritos
@@ -55,15 +55,15 @@ Entonces, la lista de favoritos deberá actualizarse en tiempo real y persistir 
 🔍 Caso de prueba 2: Recargar la página y comprobar que los favoritos siguen guardados.
 🔍 Caso de prueba 3: Desmarcar un producto de favoritos y verificar que desaparece de la lista.
 
-![Cambio de color](/T2/SPRINT_3/GIF/4.gif)
+![Cambio de color](/T2/Sprint3/GIF/4.gif)
 Prueba 1: Marcar un producto como favorito y verificar que aparece en la sección correspondiente.
 
 
-![Cambio de color](/T2/SPRINT_3/GIF/5.gif)
+![Cambio de color](/T2/Sprint3/GIF/5.gif)
 Prueba 2: Recargar la página y comprobar que los favoritos siguen guardados.
 
 
-![Cambio de color](/T2/SPRINT_3/GIF/6.gif)
+![Cambio de color](/T2/Sprint3/GIF/6.gif)
 Prueba 3: Desmarcar un producto de favoritos y verificar que desaparece de la lista.
 
 
@@ -88,15 +88,15 @@ Entonces, el total del carrito deberá actualizarse automáticamente y la elimin
 🔍 Caso de prueba 2: Eliminar un producto y confirmar que el total del carrito se actualiza correctamente.
 🔍 Caso de prueba 3: Recargar la página y comprobar que el producto eliminado no reaparece en el carrito.
 
-![Cambio de color](/T2/SPRINT_3/GIF/7.gif.gif)
+![Cambio de color](/T2/Sprint3/GIF/7.gif.gif)
 Prueba 1: Agregar un producto al carrito y luego eliminarlo, verificando que desaparece de la lista.
 
 
-![Cambio de color](/T2/SPRINT_3/GIF/8.gif)
+![Cambio de color](/T2/Sprint3/GIF/8.gif)
 Prueba 2: Eliminar un producto y confirmar que el total del carrito se actualiza correctamente.
 
 
-![Cambio de color](/T2/SPRINT_3/GIF/9.gif)
+![Cambio de color](/T2/Sprint3/GIF/9.gif)
 Prueba 3: Recargar la página y comprobar que el producto eliminado no reaparece en el carrito.
 
 
