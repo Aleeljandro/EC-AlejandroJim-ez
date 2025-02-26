@@ -25,6 +25,7 @@ const Header = ({ cartItems }) => {
           <li><Link to="/404" className="nav-item">Proyectos</Link></li>
           <li><Link to="/404" className="nav-item">Ofertas</Link></li>
           <li><Link to="/404" className="nav-item">Contacto</Link></li>
+          <li><Link to="/favorites">❤️ Favoritos</Link></li> {/* Nuevo enlace */}
         </ul>
       </nav>
       <div 

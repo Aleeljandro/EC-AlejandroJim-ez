@@ -67,3 +67,17 @@
     font-size: 1.2em;
     margin-top: 20px;
 }
+
+.remove-item-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.remove-item-button:hover {
+    background-color: darkred;
+}

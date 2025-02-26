@@ -1,7 +1,7 @@
 import React from "react";
-import '../../styles/CartPage.css';
+import "../../styles/CartPage.css";
 
-const CartPage = ({ cartItems }) => {
+const CartPage = ({ cartItems, setCartItems }) => {
     // Agrupar productos por id y contar la cantidad
     const groupedItems = cartItems.reduce((acc, item) => {
         const existingItem = acc.find(i => i.id === item.id);
@@ -13,6 +13,11 @@ const CartPage = ({ cartItems }) => {
         return acc;
     }, []);
 
+    // Función para eliminar un producto del carrito
+    const removeFromCart = (id) => {
+        setCartItems(cartItems.filter(item => item.id !== id));
+    };
+
     return (
         <div className="cart-page">
             <h2>Carrito de Compras</h2>
@@ -21,12 +26,18 @@ const CartPage = ({ cartItems }) => {
             ) : (
                 <ul>
                     {groupedItems.map((item, index) => (
-                        <li key={index}>
+                        <li key={index} className="cart-item">
                             <img src={item.image} alt={item.name} className="cart-item-image" />
                             <div className="cart-item-details">
                                 <p className="cart-item-name">{item.name}</p>
-                                <p className="cart-item-price">{item.price}</p>
+                                <p className="cart-item-price">${item.price}</p>
                                 <p className="cart-item-quantity">Cantidad: {item.quantity}</p>
+                                <button 
+                                    className="remove-item-button"
+                                    onClick={() => removeFromCart(item.id)}
+                                >
+                                    Eliminar
+                                </button>
                             </div>
                         </li>
                     ))}

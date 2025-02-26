@@ -1,6 +1,6 @@
 const mockProducts = [
     {
-        id: 2,
+        id: 1,
         name: "Silla Gilda",
         description: "Bolso Silla Gilda Uzturre con 10% de descuento",
         price: "64,80€",
